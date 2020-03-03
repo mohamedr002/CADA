@@ -115,7 +115,7 @@ def cross_domain_train(params,device, config, model, my_dataset, src_id, tgt_id,
         print(f'Epoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s')
         print(f'Discriminator_loss:{mean_loss} \t Discriminator_accuracy{mean_accuracy}')
         print(f'target_loss:{mean_tgt_loss}  \t NCE_loss{mean_nce}')
-        if epoch % 1 == 0:
+        if epoch % 10 == 0:
             src_only_loss, src_only_score, _, _, _, _ = evaluate(source_model, tgt_test_dl, criterion, config,device)
             test_loss, test_score, _, _, _, _ = evaluate(target_model, tgt_test_dl, criterion, config,device)
             print(f'Src_Only RMSE:{src_only_loss} \t Src_Only Score:{src_only_score}')

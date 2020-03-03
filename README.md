@@ -19,8 +19,7 @@ Conference
 </div>
  
 ## Description   
-What it does   
-
+In this paper we propose adversarial transfer domain adaptation approach with noise contrastive estimation approach for remaining useful life estimation of turbofan engine. The proposed approach aim to align the feature distrubtion between the source and target using adversarial approach. However, this approach can remove target specific information to align the two distribution, which can deteriorate the performance. To handle this issue, we propose to use noise contrastive estimation approach to maximize the mutual information between the target input and target features to keep the semantic strucutre of the target data during domain alignmet. 
 ## How to run   
 First, install dependencies   
 ```bash

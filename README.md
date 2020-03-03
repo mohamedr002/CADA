@@ -24,34 +24,28 @@ In this paper we propose adversarial transfer domain adaptation approach with no
 First, install dependencies   
 ```bash
 # clone project   
-git clone https://github.com/YourGithubName/Your-project-name   
+git clone https://github.com/mohamedr002/ATL_NCE  
 
 # install project   
-cd Your-project-name 
+cd ATL_NCE
 pip install -e .   
 pip install -r requirements.txt
  ```   
- Next, navigate to [Your Main Contribution (MNIST here)] and run it.   
+ Next, Downlaod the turbofan engine dataset from here  [CMAPPS](https://catalog.data.gov/dataset/c-mapss-aircraft-engine-simulator-data) 
  ```bash
-# module folder
-cd research_seed/mnist/   
-
 # run module (example: mnist as your main contribution)   
 python mnist_trainer.py    
 ```
 
 ## Main Contribution      
-List your modules here. Each module contains all code for a full system including how to run instructions.   
-- [MNIST](https://github.com/williamFalcon/pytorch-lightning-conference-seed/tree/master/research_seed/mnist)  
+
 
 ## Baselines    
-List your baselines here.   
-- [MNIST_baseline](https://github.com/williamFalcon/pytorch-lightning-conference-seed/tree/master/research_seed/baselines/mnist_baseline)  
 
 ### Citation   
 ```
-@article{YourName,
-  title={Your Title},
+@article{Mohamed Ragab,
+  title={Adverarial Transfer Learning with Noise Constrastive for Machine Remaining Useful Life estimation },
   author={Your team},
   journal={Location},
   year={Year}

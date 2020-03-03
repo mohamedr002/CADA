@@ -1,1 +1,13 @@
-pytorch-lightning
+matplotlib==3.1.2
+numpy==1.18.1
+pandas==0.25.3
+pip==9.0.1
+scikit-learn==0.22
+scipy==1.4.1
+sklearn==0.0
+tensorboard==1.14.0
+torch==1.4.0
+tqdm==4.41.0
+typing==3.7.4.1
+virtualenv==16.7.8
+wandb==0.8.25

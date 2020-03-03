@@ -34,7 +34,7 @@ pip install -r requirements.txt
  Next, Downlaod the turbofan engine dataset from here  [CMAPPS](https://catalog.data.gov/dataset/c-mapss-aircraft-engine-simulator-data) 
  ```bash
 # run module (example: mnist as your main contribution)   
-python mnist_trainer.py    
+python main_cross_domains.py    
 ```
 
 ## Main Contribution      

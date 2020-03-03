@@ -27,8 +27,7 @@ First, install dependencies
 git clone https://github.com/mohamedr002/ATL_NCE  
 
 # install project   
-cd ATL_NCE
-pip install -e .   
+cd ATL_NCE   
 pip install -r requirements.txt
  ```   
  Next, Downlaod the turbofan engine dataset from here  [CMAPPS](https://catalog.data.gov/dataset/c-mapss-aircraft-engine-simulator-data)

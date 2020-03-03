@@ -31,7 +31,11 @@ cd ATL_NCE
 pip install -e .   
 pip install -r requirements.txt
  ```   
- Next, Downlaod the turbofan engine dataset from here  [CMAPPS](https://catalog.data.gov/dataset/c-mapss-aircraft-engine-simulator-data) 
+ Next, Downlaod the turbofan engine dataset from here  [CMAPPS](https://catalog.data.gov/dataset/c-mapss-aircraft-engine-simulator-data)
+  ```bash
+# run_the data/data_preprocessing.py to apply the preprocessings.
+```
+ Finally, run the code to expirement the model among different datasets. 
  ```bash
 # run module (example: mnist as your main contribution)   
 python main_cross_domains.py    

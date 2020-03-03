@@ -1,21 +1,13 @@
 import torch
-from torch import nn
-import torch.nn.functional as F
-from torch.nn.utils import weight_norm
-import math
 import numpy as np 
 device = torch.device('cuda:1')
-import random
-from torch.autograd import Variable
 import pandas as pd
 from models.my_models import *
-from models.models_config import get_model_config, initlize
-from trainer.pre_train_test_split import pre_train
-from data.mydataset import create_dataset, create_dataset_full
+from models.models_config import get_model_config
 import wandb
 from torch.utils.tensorboard import SummaryWriter
 #Different Domain Adaptation  approaches
-from trainer.cross_domain_models.ADDA_NCE_v2 import cross_domain_train
+from trainer.cross_domain_models.ATL_NCE import cross_domain_train
 
 
 select_method='ATL_NCE'

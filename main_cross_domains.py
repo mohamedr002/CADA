@@ -9,32 +9,32 @@ from torch.utils.tensorboard import SummaryWriter
 #Different Domain Adaptation  approaches
 from trainer.cross_domain_models.ATL_NCE import cross_domain_train
 
+def main():
+    select_method='ATL_NCE'
+    # hyper parameters
+    hyper_param={ 'FD001_FD002': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD001_FD003': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD001_FD004': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD002_FD001': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
+                  'FD002_FD003': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
+                  'FD002_FD004': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
+                  'FD003_FD001': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD003_FD002': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD003_FD004': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD004_FD001': {'epochs':150,'batch_size':256,'lr':3e-4,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD004_FD002': {'epochs':150,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD004_FD003': {'epochs':150,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001}}
+    # load dataset
+    data_path= "/home/emad/Mohamed2/Mohamed/data/cmapps_train_test_cross_domain.pt"
+    my_dataset = torch.load(data_path)
 
-select_method='ATL_NCE'
-# hyper parameters
-hyper_param={ 'FD001_FD002': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD001_FD003': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD001_FD004': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD002_FD001': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
-              'FD002_FD003': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
-              'FD002_FD004': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
-              'FD003_FD001': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD003_FD002': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD003_FD004': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD004_FD001': {'epochs':50,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD004_FD002': {'epochs':50,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-              'FD004_FD003': {'epochs':50,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001}}
-# load dataset
-data_path= "/home/emad/Mohamed2/Mohamed/data/cmapps_train_test_cross_domain.pt"
-my_dataset = torch.load(data_path)
+    # configuration setup
+    config = get_model_config('LSTM')
+    config.update({'num_runs':1, 'save':False, 'tensorboard':False,'tsne':False,'tensorboard_epoch':False,'k_disc':100, 'k_clf':1,'iterations':1})
 
-# configuration setup 
-config = get_model_config('LSTM') 
-config.update({'num_runs':1, 'save':False, 'tensorboard':False,'tsne':False,'tensorboard_epoch':False,'k_disc':100, 'k_clf':1,'iterations':1}) 
-
-if config['tensorboard']:
-  wandb.init(project="Domain Adaptation for with Contrastive Coding",name=f"{select_method}",dir= "/home/emad/Mohamed2/ATL_NCE/visualize/", sync_tensorboard=True) 
-  wandb.config  = hyper_param  
+    if config['tensorboard']:
+      wandb.init(project="Domain Adaptation for with Contrastive Coding",name=f"{select_method}",dir= "/home/emad/Mohamed2/ATL_NCE/visualize/", sync_tensorboard=True)
+      wandb.config  = hyper_param
 
 
 

@@ -108,12 +108,12 @@ def process_data(data_dir, data_identifier,winSize=30):
         test_01_nor = pd.concat([Test_Settings, Test_Norm], axis = 1)
         train_01_nor = train_01_nor.values
         test_01_nor = test_01_nor.values
-        train_01_nor = np.delete(train_01_nor, [5,6,9,10,11,12,14,16,17,20,22,23], axis=1) # sensor 1 for index 5   2,3,4,
-        test_01_nor = np.delete(test_01_nor, [5,6,9,10,11,12,14,16,17,20,22,23], axis=1)
+        train_01_nor = np.delete(train_01_nor, [5, 9, 10, 14, 20, 22, 23], axis=1)  # sensor 1 for index 5 2,3,4
+        test_01_nor = np.delete(test_01_nor, [5, 9, 10, 14, 20, 22, 23], axis=1)
 
     else:
         print("--single operating conditions--")
-        max_RUL = 125.0
+        max_RUL = 130.0
         with np.nditer(train_01_raw['setting1'], op_flags=['readwrite']) as it:
             for x in it:
                 x[...] = 0.0

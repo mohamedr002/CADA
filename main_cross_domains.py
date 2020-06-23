@@ -14,10 +14,10 @@ def main():
     # hyper parameters
     hyper_param={ 'FD001_FD002': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
                   'FD001_FD003': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
-                  'FD001_FD004': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
+                  'FD001_FD004': {'epochs':75,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
                   'FD002_FD001': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
                   'FD002_FD003': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
-                  'FD002_FD004': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.001},
+                  'FD002_FD004': {'epochs':20,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
                   'FD003_FD001': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
                   'FD003_FD002': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},
                   'FD003_FD004': {'epochs':100,'batch_size':256,'lr':5e-5,'nce_lr':1e-2, 'alpha_nce':0.2},

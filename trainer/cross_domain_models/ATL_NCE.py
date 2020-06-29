@@ -49,7 +49,7 @@ def cross_domain_train(params,device, config, model, my_dataset, src_id, tgt_id,
     # optimizer
     discriminator_optim = torch.optim.AdamW(discriminator.parameters(), lr=hyper['lr'], betas=(0.5, 0.9))
     target_optim = torch.optim.AdamW(target_encoder.parameters(), lr=hyper['lr'], betas=(0.5, 0.9))
-    nce_optim = torch.optim.AdamW(comput_nce.parameters(), lr=hyper['nce_lr'], betas=(0.5, 0.5))
+    nce_optim = torch.optim.AdamW(comput_nce.parameters(), lr=hyper['nce_lr'], betas=(0.5, 0.9))
     if config['tensorboard']:
         comment = (f'/home/emad/Mohamed2/visualize/Scenario={src_id} to {tgt_id}')
         tb = SummaryWriter(comment)

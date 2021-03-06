@@ -47,10 +47,13 @@ python main_cross_domains.py
 
 ### Citation   
 ```
-@article{Mohamed Ragab,
-  title={Adverarial Transfer Learning with Noise Constrastive for Machine Remaining Useful Life estimation },
-  author={Your team},
-  journal={Location},
-  year={Year}
-}
+@article{CADA,
+  author={M. {Ragab} and Z. {Chen} and M. {Wu} and C. S. {Foo} and K. C. {Keong} and R. {Yan} and X. -L. {Li}},
+  journal={IEEE Transactions on Industrial Informatics}, 
+  title={Contrastive Adversarial Domain Adaptation for Machine Remaining Useful Life Prediction}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TII.2020.3032690}}
 ```   

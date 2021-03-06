@@ -4,7 +4,7 @@
  
 # Contrastive Adversarial Domain Adaptation for Machine Remaining Useful Life Predictionn     
 
-(IEEE Transactions on Industrial Informatics)](https://ieeexplore.ieee.org/document/9234721)
+(IEEE Transactions on Industrial Informatics)(https://ieeexplore.ieee.org/document/9234721)
 
 <!--
 ARXIV   
